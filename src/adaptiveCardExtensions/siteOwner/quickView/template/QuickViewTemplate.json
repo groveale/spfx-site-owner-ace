@@ -1,0 +1,42 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "$data": "${siteItems}",
+      "items": [
+        {
+          "type": "Container",
+          "style": "emphasis",
+          "spacing": "large",
+          "separator": true,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${SiteName}",
+              "size": "Large",
+              "weight": "Bolder",
+              "color": "Accent",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "${SiteUrl}",
+              "isSubtle": true,
+              "wrap": true,
+              "spacing": "Small"
+            },
+            {
+              "type": "TextBlock",
+              "text": "User Type: ${UserType}",
+              "wrap": true,
+              "spacing": "Medium"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

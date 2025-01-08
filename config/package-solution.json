@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-site-owner-client-side-solution",
+    "id": "22a8e9a8-1e26-4089-a84d-ffe7a3df6c3c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-site-owner description"
+      },
+      "longDescription": {
+        "default": "spfx-site-owner description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-site-owner Feature",
+        "description": "The feature that activates elements of the spfx-site-owner solution.",
+        "id": "4238b623-dcc0-4956-b2e6-047f319f8e3d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-site-owner.sppkg"
+  }
+}
