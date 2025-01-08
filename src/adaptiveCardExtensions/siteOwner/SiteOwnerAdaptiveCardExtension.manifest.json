@@ -22,7 +22,8 @@
     "properties": {
       "title": "Sites you Own",
       "listTitle": "SitePermissionRecord-20250107143527",
-      "siteUrl": "https://m365cpi77517573.sharepoint.com/sites/SiteOwners"
+      "siteUrl": "https://m365cpi77517573.sharepoint.com/sites/SiteOwners",
+      "useMock": true
     },
     "cardSize": "Large"
   }]

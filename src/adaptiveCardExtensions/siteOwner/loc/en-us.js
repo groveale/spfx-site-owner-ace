@@ -7,5 +7,8 @@ define([], function() {
     "PrimaryText": "4 sites",
     "Description": "Create your SPFx Adaptive Card Extension solution!",
     "QuickViewButton": "Site Details",
+    "SiteUrlFieldLabel": "Site URL",
+    "ListTitleFieldLabel": "List Title",
+    "UseMockFieldLabel": "Use mock data"
   }
 });

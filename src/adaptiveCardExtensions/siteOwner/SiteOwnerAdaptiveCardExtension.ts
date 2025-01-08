@@ -6,6 +6,7 @@ import { SiteOwnerPropertyPane } from './SiteOwnerPropertyPane';
 import { ISiteOwnerService } from './services/ISiteOwnerService';
 import { SiteOwnerService } from './services/SiteOwnerService';
 import { ISiteItem } from './models/ISiteItem';
+import { MockSiteOwnerService } from './services/MockSiteOwnerService';
 
 
 
@@ -13,6 +14,7 @@ export interface ISiteOwnerAdaptiveCardExtensionProps {
   title: string;
   listTitle: string;
   siteUrl: string;
+  useMock: boolean;
 }
 
 export interface ISiteOwnerAdaptiveCardExtensionState {
@@ -39,8 +41,12 @@ export default class SiteOwnerAdaptiveCardExtension extends BaseAdaptiveCardExte
     // registers the quick view to open via QuickView action
     this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
 
+    console.log(this.properties.useMock);
+
     // consume the service
-    this._client = this.context.serviceScope.consume(SiteOwnerService.serviceKey);
+    this._client = this.properties.useMock 
+    ? this.context.serviceScope.consume(MockSiteOwnerService.serviceKey) 
+    : this.context.serviceScope.consume(SiteOwnerService.serviceKey);
 
     //return Promise.resolve();
     return this._fetchData();

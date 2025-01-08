@@ -22,6 +22,8 @@ export class SiteOwnerService implements ISiteOwnerService {
             throw new Error('SiteOwnerService not initialized!')
         }
 
+        console.log("SiteOwnerService: getSiteItems called");
+
         // Step 1: Use the SharePoint HTTP client to send a GET request to retrieve data from the specified SharePoint list.
         // The URL for the request is built using the SharePoint API with the list title from the properties.
         return this._client.get(

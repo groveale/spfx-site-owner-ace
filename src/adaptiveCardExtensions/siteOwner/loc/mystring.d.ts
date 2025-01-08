@@ -6,6 +6,9 @@ declare interface ISiteOwnerAdaptiveCardExtensionStrings {
   PrimaryText: string;
   Description: string;
   QuickViewButton: string;
+  ListTitleFieldLabel: string;
+  SiteUrlFieldLabel: string;
+  UseMockFieldLabel: string;
 }
 
 declare module 'SiteOwnerAdaptiveCardExtensionStrings' {

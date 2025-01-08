@@ -6,33 +6,91 @@
     {
       "type": "Container",
       "$data": "${siteItems}",
+      "style": "emphasis",
       "items": [
         {
-          "type": "Container",
-          "style": "emphasis",
-          "spacing": "large",
-          "separator": true,
-          "items": [
+          "type": "ColumnSet",
+          "columns": [
             {
-              "type": "TextBlock",
-              "text": "${SiteName}",
-              "size": "Large",
-              "weight": "Bolder",
-              "color": "Accent",
-              "wrap": true
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${SiteName}",
+                  "size": "Large",
+                  "weight": "Bolder",
+                  "color": "Accent"
+                }
+              ]
             },
             {
-              "type": "TextBlock",
-              "text": "${SiteUrl}",
-              "isSubtle": true,
-              "wrap": true,
-              "spacing": "Small"
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Image",
+                  "url": "${if(LockStatus == 'Unlock', 'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\"><path fill=\"green\" d=\"M12 1a5 5 0 0 1 5 5v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a5 5 0 0 1 5-5z\"/></svg>', 'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\"><path fill=\"red\" d=\"M12 1a5 5 0 0 1 5 5v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a5 5 0 0 1 5-5z\"/></svg>')}",
+                  "width": "24px",
+                  "height": "24px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ColumnSet",
+          "spacing": "Medium",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${SiteUrl}",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FactSet",
+          "spacing": "Medium",
+          "facts": [
+            {
+              "title": "🏷️",
+              "value": "${SensitivityLabel}"
             },
             {
-              "type": "TextBlock",
-              "text": "User Type: ${UserType}",
-              "wrap": true,
-              "spacing": "Medium"
+              "title": "👤",
+              "value": "${UserType}"
+            },
+            {
+              "title": "📁",
+              "value": "${FileCount} files"
+            },
+            {
+              "title": "📅",
+              "value": "Created: ${formatDateTime(CreatedDate, 'MMM dd, yyyy')}"
+            },
+            {
+              "title": "⏱️",
+              "value": "Last Activity: ${formatDateTime(LastUserActivityDate, 'MMM dd, yyyy')}"
+            },
+            {
+              "title": "🔒",
+              "value": "${Visibility}"
+            },
+            {
+              "title": "🔗",
+              "value": "${SharingCapability}"
+            }
+            ,
+            {
+              "title": "👍",
+              "value": "${HasTeam} "
             }
           ]
         }
